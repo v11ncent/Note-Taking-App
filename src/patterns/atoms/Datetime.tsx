@@ -5,7 +5,16 @@ interface Props {
 }
 
 export default function Datetime({ datetime }: Props) {
-  return <Time dateTime={datetime.toLocaleString()}>{datetime.toLocaleString()}</Time>;
+  return (
+    <Time dateTime={datetime.toLocaleString()}>
+      {datetime.toLocaleString("en-us", {
+        weekday: "long",
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })}
+    </Time>
+  );
 }
 
 const Time = styled.time`

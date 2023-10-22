@@ -4,33 +4,39 @@ interface Props {
   children: any;
 }
 
-const NotesContainer = styled.div`
+const NotesContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 64px;
+  padding: 0;
+  list-style-type: none;
 
-  @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
+  li {
+    border-radius: clamp(10px, 10px + 1vw, 30px);
   }
 
-  & > div:nth-of-type(5n + 1) {
+  & li:nth-of-type(5n + 1) {
     background-color: #b692fe;
   }
 
-  & > div:nth-of-type(5n + 2) {
+  & li:nth-of-type(5n + 2) {
     background-color: #e6ee92;
   }
 
-  & > div:nth-of-type(5n + 3) {
+  & li:nth-of-type(5n + 3) {
     background-color: #00d4ff;
   }
 
-  & > div:nth-of-type(5n + 4) {
+  & li:nth-of-type(5n + 4) {
     background-color: #ffc972;
   }
 
-  & > div:nth-of-type(5n + 5) {
+  & li:nth-of-type(5n + 5) {
     background-color: #ff9b74;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
   }
 `;
 

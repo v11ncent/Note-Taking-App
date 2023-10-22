@@ -11,7 +11,7 @@ interface Props {
 
 export default function Note({ heading, note, datetime }: Props) {
   return (
-    <NoteContainer>
+    <NoteContainer className="note">
       <div>
         <Heading level={2} text={heading} />
         <Text text={note} />
@@ -27,7 +27,6 @@ const NoteContainer = styled.div`
   justify-content: space-between;
   min-height: 350px;
   padding: clamp(1em, 1em + 0.5vw, 2em) clamp(0.75em, 0.75em + 0.5vw, 1.75em);
-  border-radius: clamp(10px, 10px + 1vw, 30px);
   transition: all 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   p {
