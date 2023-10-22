@@ -22,7 +22,11 @@ export default function Form({ setNotes, handleClose }: Props) {
   const handleSubmit = () => {
     setNotes((notes: { heading: string; note: string }[]) => [
       ...notes,
-      { heading: values.title, note: values.note, datetime: new Date() },
+      {
+        heading: values.title,
+        note: values.note,
+        datetime: new Date().toLocaleString(),
+      },
     ]);
     handleClose();
   };

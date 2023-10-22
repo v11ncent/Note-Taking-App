@@ -6,7 +6,7 @@ import Datetime from "../atoms/Datetime";
 interface Props {
   heading: string;
   note: string;
-  datetime: Date;
+  datetime: string;
 }
 
 export default function Note({ heading, note, datetime }: Props) {
@@ -27,6 +27,7 @@ const NoteContainer = styled.div`
   justify-content: space-between;
   min-height: 350px;
   padding: clamp(1em, 1em + 0.5vw, 2em) clamp(0.75em, 0.75em + 0.5vw, 1.75em);
+  border-radius: clamp(10px, 10px + 1vw, 30px);
   transition: all 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
   p {

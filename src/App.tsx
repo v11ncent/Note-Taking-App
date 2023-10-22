@@ -15,7 +15,7 @@ export default function App() {
           {
             heading: "Your first note",
             note: "Click the button in the top right to start adding your notes 🙂",
-            datetime: new Date(),
+            datetime: new Date().toLocaleString(),
           },
         ]
   );
