@@ -32,7 +32,7 @@ export default function App() {
           <Modal setNotes={setNotes} />
         </header>
         <Notes>
-          {notes.map((note: { heading: string; note: string; datetime: Date }, index: number) => (
+          {notes.map((note: { heading: string; note: string; datetime: string }, index: number) => (
             <li key={index}>
               <Note heading={note.heading} note={note.note} datetime={note.datetime} />
             </li>
